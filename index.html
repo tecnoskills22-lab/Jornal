@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>O Diário Nacional</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- TOPO -->
+  <header class="topo">
+    <div class="topo-info">
+      <span id="data-atual"></span>
+      <span>Edição Digital</span>
+      <span>🌤 São Paulo, SP</span>
+    </div>
+    <div class="logo-container">
+      <h1 class="logo">O Diário Nacional</h1>
+      <p class="slogan">A verdade em cada linha</p>
+    </div>
+    <nav class="menu-principal">
+      <a href="#" class="ativo" data-categoria="todos">Início</a>
+      <a href="#" data-categoria="politica">Política</a>
+      <a href="#" data-categoria="economia">Economia</a>
+      <a href="#" data-categoria="esportes">Esportes</a>
+      <a href="#" data-categoria="cultura">Cultura</a>
+      <a href="#" data-categoria="tecnologia">Tecnologia</a>
+      <a href="#" data-categoria="mundo">Mundo</a>
+    </nav>
+  </header>
+
+  <!-- BREAKING NEWS -->
+  <div class="breaking-news">
+    <span class="badge">URGENTE</span>
+    <div class="ticker-wrapper">
+      <div class="ticker" id="ticker"></div>
+    </div>
+  </div>
+
+  <!-- BUSCA -->
+  <div class="busca-container">
+    <input type="text" id="busca" placeholder="🔍 Buscar notícias..." />
+  </div>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="conteudo">
+
+    <!-- DESTAQUE -->
+    <section class="destaque" id="destaque"></section>
+
+    <!-- GRADE DE NOTÍCIAS -->
+    <div class="layout">
+      <section class="noticias" id="grade-noticias"></section>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="widget">
+          <h3 class="widget-titulo">📰 Mais Lidas</h3>
+          <ol class="mais-lidas" id="mais-lidas"></ol>
+        </div>
+        <div class="widget">
+          <h3 class="widget-titulo">🏷 Tópicos em Alta</h3>
+          <div class="tags" id="tags"></div>
+        </div>
+        <div class="widget clima-widget">
+          <h3 class="widget-titulo">🌤 Clima</h3>
+          <div class="clima-info">
+            <span class="clima-temp">24°C</span>
+            <span class="clima-desc">Parcialmente nublado</span>
+            <span class="clima-cidade">São Paulo</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+  </main>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal" id="modal">
+      <button class="fechar-modal" id="fechar-modal">✕</button>
+      <div id="modal-conteudo"></div>
+    </div>
+  </div>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+    <div class="rodape-grid">
+      <div>
+        <h4>O Diário Nacional</h4>
+        <p>Jornalismo independente desde 1985. Comprometidos com a verdade e a transparência.</p>
+      </div>
+      <div>
+        <h4>Seções</h4>
+        <ul>
+          <li><a href="#">Política</a></li>
+          <li><a href="#">Economia</a></li>
+          <li><a href="#">Esportes</a></li>
+          <li><a href="#">Cultura</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li>redacao@odiarionacional.com.br</li>
+          <li>(11) 3000-1234</li>
+          <li>São Paulo – SP</li>
+        </ul>
+      </div>
+    </div>
+    <div class="rodape-copy">
+      <p>© <span id="ano"></span> O Diário Nacional. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
